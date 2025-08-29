@@ -5,4 +5,4 @@ spring:
     import: "configserver:"
   cloud:
     config:
-      uri: https://config-server-gccmftfddne6c3gb.mexicocentral-01.azurewebsites.net
+      uri: ${SPRING_CLOUD_CONFIG_URI:http://config-server:7777}
