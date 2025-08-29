@@ -10,7 +10,7 @@ public class GatewayConfig {
     @Bean
     public RouteLocator routerLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(route -> route.path("/msvc-billing/**").uri("lb://msvc-billing"))
+                // .route(route -> route.path("/msvc-billing/**").uri("lb://msvc-billing"))
                 // .route(route -> route.path("/msvc-").uri(""))
                 .build();
     }
