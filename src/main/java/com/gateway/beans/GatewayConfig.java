@@ -49,7 +49,7 @@ class AzureGatewayConfig {
                 .route("msvc-billing-route", route -> route
                         .path("/billing/**")
                         .filters(f -> f.stripPrefix(1))
-                        .uri("http://msvc-billing:9093"))
+                        .uri("https://msvc-billing-agathvhsh4f5c5a6.chilecentral-01.azurewebsites.net"))
                 .route("msvc-chat", route -> route
                         .path("/chat/**")
                         .filters(f -> f.stripPrefix(1))
