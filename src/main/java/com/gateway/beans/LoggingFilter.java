@@ -12,7 +12,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Component
-public class LoggingFilter implements GlobalFilter, Ordered {
+public class LoggingFilter implements GlobalFilter {
     private static final Logger log = LoggerFactory.getLogger(LoggingFilter.class);
 
     @Override
@@ -26,8 +26,8 @@ public class LoggingFilter implements GlobalFilter, Ordered {
         }));
     }
 
-    @Override
-    public int getOrder() {
-        return -1;
-    }
+//    @Override
+//    public int getOrder() {
+//        return -1;
+//    }
 }

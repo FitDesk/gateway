@@ -22,7 +22,6 @@ public class GatewayConfig {
                 .route("msvc-billing-route", route -> route
                         .path("/billing/**")
                         .filters(f -> f
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("billingCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/billing")
@@ -32,7 +31,6 @@ public class GatewayConfig {
                 .route("msvc-chat", route -> route
                         .path("/chat/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("chatCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/chat")
@@ -42,7 +40,6 @@ public class GatewayConfig {
                 .route("msvc-classes", route -> route
                         .path("/classes/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("classesCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/classes")
@@ -52,7 +49,6 @@ public class GatewayConfig {
                 .route("msvc-members", route -> route
                         .path("/members/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("membersCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/members")
@@ -62,7 +58,6 @@ public class GatewayConfig {
                 .route("msvc-notifications", route -> route
                         .path("/notifications/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("notificationsCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/notifications")
@@ -72,7 +67,6 @@ public class GatewayConfig {
                 .route("msvc-security", route -> route
                         .path("/security/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("securityCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/security")
@@ -98,7 +92,6 @@ class AzureGatewayConfig {
                 .route("msvc-billing-route", route -> route
                         .path("/billing/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("billingCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/billing")
@@ -114,7 +107,6 @@ class AzureGatewayConfig {
                 .route("msvc-chat", route -> route
                         .path("/chat/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("chatCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/chat")
@@ -123,7 +115,6 @@ class AzureGatewayConfig {
                 .route("msvc-classes", route -> route
                         .path("/classes/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("classesCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/classes")
@@ -139,7 +130,6 @@ class AzureGatewayConfig {
                 .route("msvc-members", route -> route
                         .path("/members/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("membersCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/members")
@@ -155,7 +145,6 @@ class AzureGatewayConfig {
                 .route("msvc-notifications", route -> route
                         .path("/notifications/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("notificationsCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/notifications")
@@ -171,7 +160,6 @@ class AzureGatewayConfig {
                 .route("msvc-security", route -> route
                         .path("/security/**")
                         .filters(f -> f.stripPrefix(1)
-                                .stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("securityCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/security")
