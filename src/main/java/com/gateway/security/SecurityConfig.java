@@ -22,6 +22,7 @@ public class SecurityConfig {
                                 "/security/auth/login",
                                 "/security/auth/status",
                                 "/security/auth/refresh",
+                                "/security/auth/register",
                                 "/security/saludo",
                                 "/auth/logout",
                                 "/fallback/**"
