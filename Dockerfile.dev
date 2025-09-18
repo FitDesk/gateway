@@ -1,31 +1,9 @@
-# FROM openjdk:21-jdk-slim
-# WORKDIR /app
-# COPY pom.xml .
-# COPY mvnw .
-# COPY .mvn .mvn
-# RUN chmod +x mvnw
-# RUN ./mvnw dependency:go-offline
-# COPY src ./src
-# EXPOSE 9090
-# CMD ["./mvnw", "spring-boot:run"]
-
 FROM openjdk:21-jdk-slim
 WORKDIR /app
-
-# Copiar archivos necesarios para Maven
-COPY pom.xml .
-COPY mvnw .
 COPY .mvn .mvn
+COPY mvnw pom.xml ./
 RUN chmod +x mvnw
-
-# Descargar dependencias
-RUN ./mvnw dependency:go-offline
-
-# Copiar el código fuente
+RUN ./mvnw -T 4 dependency:go-offline
 COPY src ./src
-
-# Exponer el puerto de la aplicación y el puerto de debug remoto
 EXPOSE 9090 5005
-
-# Ejecutar la aplicación con soporte para debug remoto y hot reload
 CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.jvmArguments=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"]
