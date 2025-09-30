@@ -43,6 +43,7 @@ public class SecurityConfig {
                                                                 "/security/auth/register",
                                                                 "/security/saludo",
                                                                 "/auth/logout",
+                                                                "/chat/test/**",
                                                                 "/fallback/**")
                                                 .permitAll()
                                                 .anyExchange().authenticated())
