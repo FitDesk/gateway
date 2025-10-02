@@ -93,11 +93,11 @@
             <artifactId>lombok</artifactId>
             <scope>annotationProcessor</scope>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-datadog</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency> -->
     </dependencies>
     <dependencyManagement>
         <dependencies>

@@ -44,7 +44,12 @@ public class SecurityConfig {
                                                                 "/security/saludo",
                                                                 "/auth/logout",
                                                                 "/chat/test/**",
-                                                                "/fallback/**")
+                                                                "/classes/test/**",
+                                                                "/fallback/**"
+                                                                // "/**/swagger-ui/**",
+                                                                // "/**/v3/api-docs/**"
+                                                        
+                                                                )
                                                 .permitAll()
                                                 .anyExchange().authenticated())
                                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
