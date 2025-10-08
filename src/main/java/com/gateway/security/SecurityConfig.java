@@ -41,15 +41,14 @@ public class SecurityConfig {
                                                                 "/security/auth/status",
                                                                 "/security/auth/refresh",
                                                                 "/security/auth/register",
-                                                                "/security/saludo",
+                                                                "/security/oauth2/**",
+                                                                "/security/login/oauth2/**",
+                                                                "/security/test/**",
                                                                 "/auth/logout",
                                                                 "/chat/test/**",
+                                                                "/billing/payments/**",
                                                                 "/classes/test/**",
-                                                                "/fallback/**"
-                                                                // "/**/swagger-ui/**",
-                                                                // "/**/v3/api-docs/**"
-                                                        
-                                                                )
+                                                                "/fallback/**")
                                                 .permitAll()
                                                 .anyExchange().authenticated())
                                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
