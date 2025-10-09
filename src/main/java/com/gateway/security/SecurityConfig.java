@@ -46,7 +46,7 @@ public class SecurityConfig {
                                                                 "/security/test/**",
                                                                 "/auth/logout",
                                                                 "/chat/test/**",
-                                                                "/billing/payments/**",
+                                                                "/billing/plans/**",
                                                                 "/classes/test/**",
                                                                 "/fallback/**")
                                                 .permitAll()

@@ -19,7 +19,7 @@ public class GatewayConfig {
         return builder.routes()
                 .route("msvc-billing", route -> route
                         .path("/billing/**")
-                        .filters(f -> f
+                        .filters(f -> f.stripPrefix(1)
                                 .circuitBreaker(config -> config
                                         .setName("billingCircuitBreaker")
                                         .setFallbackUri("forward:/fallback/billing")
