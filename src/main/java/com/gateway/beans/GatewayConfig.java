@@ -17,6 +17,9 @@ public class GatewayConfig {
     @Bean
     public RouteLocator routerLocator(RouteLocatorBuilder builder) {
         return builder.routes()
+                .route("msvc-chat-websocket",route-> route
+                        .path("/ws/chat/**")
+                        .uri("lb:ws://msvc-chat"))
                 .route("msvc-billing", route -> route
                         .path("/billing/**")
                         .filters(f -> f.stripPrefix(1)
