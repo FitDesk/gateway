@@ -26,8 +26,4 @@ public class LoggingFilter implements GlobalFilter {
         }));
     }
 
-//    @Override
-//    public int getOrder() {
-//        return -1;
-//    }
 }
